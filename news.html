@@ -30,8 +30,22 @@
 </head>
 
 <body>
+  <!-- facebook表示させるためのstep1-->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!----------------------------------->
+
   <!--header------------------------------------------>
- <header>
+  <header>
 
     <!--header > .container > .row の順番でHTMLを追加。skeleton.css内で定義される。-->
     <div id="header_in" class="container">
@@ -89,16 +103,16 @@
         <div id="main" class="nine columns">
           <h2>ニュースリリース</h2>
           <ul class="news_li">
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
-            <li><span>0000-00-00</span>"ここにニューステキストが入ります。ニューステキスト。"</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
+            <li><span>0000-00-00</span>ここにニューステキストが入ります。ニューステキスト。</li>
           </ul>
         </div>
 
@@ -113,52 +127,67 @@
             </ul>
           </div>
 
-          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="180" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- //footer ------------------------------------------------------------->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="four columns sp">
-          <img class="u-max-full-width" src="images/top/footer_logo.png" alt="株式会社サンプル" srcset="images/top/footer_logo@2x.png 2x" />
+    <!-- //footer ------------------------------------------------------------->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="four columns sp">
+            <img class="u-max-full-width" src="images/top/footer_logo.png" alt="株式会社サンプル" srcset="images/top/footer_logo@2x.png 2x" />
+          </div>
+          <!-- columns -->
+          <div class="four columns foot_address sp">
+            〒000-0000<br /> 東京都◯◯区◯◯町 560-0-0<br /> 03-0000-0000
+            <br /> info@xxxxxx.com
+          </div>
+          <!-- columns -->
+          <div class="four columns">
+            <ul class="foot_navi">
+              <li><a href="index.html">TOPページ</a></li>
+              <li><a href="news.html">ニュースリリース</a></li>
+              <li><a href="company.html">会社概要</a></li>
+            </ul>
+          </div>
+          <!-- columns -->
         </div>
-        <!-- columns -->
-        <div class="four columns foot_address sp">
-          〒000-0000<br /> 東京都◯◯区◯◯町 560-0-0<br /> 03-0000-0000
-          <br /> info@xxxxxx.com
+        <!-- row -->
+
+        <div class="row">
+          <div class="twelve columns sp">
+            <p class="copy">copyright (C) SampleCompany all rights reserved.</p>
+          </div>
+          <!-- columns -->
         </div>
-        <!-- columns -->
-        <div class="four columns">
-          <ul class="foot_navi">
-            <li><a href="index.html">TOPページ</a></li>
-            <li><a href="news.html">ニュースリリース</a></li>
-            <li><a href="company.html">会社概要</a></li>
-          </ul>
-        </div>
-        <!-- columns -->
+        <!-- row -->
       </div>
-      <!-- row -->
+    </footer>
+    <!-- //footer ------------------------------------------------------------->
+    
+    <!--sub_nav_liを表示させる為のscript-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      <!-- Toggleアニメーションの指示 -->
+      $(function() {
+        $(document).ready(function() {
 
-      <div class="row">
-        <div class="twelve columns sp">
-          <p class="copy">copyright (C) SampleCompany all rights reserved.</p>
-        </div>
-        <!-- columns -->
-      </div>
-      <!-- row -->
-    </div>
-  </footer>
-  <!-- //footer ------------------------------------------------------------->
 
+          $("#sp_navi_btn").click(function() { <!--「#sp_navi_btnをクリックした時」という出現タイミングを指定-->
+            $(this).next().slideToggle(); <!--「#sp_navi_btnの「次」の要素（=ul.sp_navi_li）をトグルアニメーションさせるという指示-->
+          });
+
+        });
+      });
+    </script>
 
 
 
 </body>
+
 
 </html>
